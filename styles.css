@@ -14,7 +14,7 @@
 }
 
 :root {
-    --navbar-bg-color: #1F4E6B;
+    --navbar-bg-color: #2D163E;
     --navbar-text-color: hsl(0, 0%, 85%);
     --navbar-text-color-focus: white;
     --navbar-bg-contrast: hsl(0, 0%, 25%);
@@ -190,7 +190,7 @@ body {
 }
 
 .start {
-    background-color: #3586B8;
+    background-color: #662D91;
     color: #FFF;
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 1em;
@@ -207,10 +207,10 @@ body {
 .start h1 {
     font-family: 'Poppins-Medium', sans-serif;
     font-size: 2em;
-    text-shadow: 1px 1px 0px #1F4E6B,
-        2px 2px 0px #1F4E6B,
-        3px 3px 0px #1F4E6B,
-        4px 4px 0px #1F4E6B;
+    text-shadow: 1px 1px 0px #2D163E,
+        2px 2px 0px #2D163E,
+        3px 3px 0px #2D163E,
+        4px 4px 0px #2D163E;
     padding-top: 5%;
 }
 
@@ -250,7 +250,7 @@ body {
 }
 
 .explaination {
-    background-color: #44ABEB;
+    background-color: #141B4B;
     color: #FFF;
     display: flex;
     justify-content: flex-start;
@@ -259,10 +259,6 @@ body {
     font-family: 'Poppins-Regular', sans-serif;
     line-height: 2rem;
     text-align: left;
-}
-
-.explaination img {
-    padding: 20% 0;
 }
 
 .explaination a {
@@ -278,6 +274,8 @@ body {
 }
 
 #blockchain {
+    background: rgb(20, 27, 75);
+    background: linear-gradient(180deg, rgba(20, 27, 75, 1) 0%, rgba(20, 27, 75, 1) 20%, rgba(45, 63, 109, 1) 40%, rgba(140, 201, 238, 1) 70%);
     color: #FFF;
     display: flex;
     justify-content: center;
@@ -286,22 +284,27 @@ body {
     font-family: 'Poppins-Regular', sans-serif;
     line-height: 2rem;
     text-align: center;
-    width: 95%;
+    width: 100%;
 }
 
 #blockchain h2 {
     font-family: 'Poppins-Bold', sans-serif;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 0px #1F4E6B,
-        2px 2px 0px #1F4E6B,
-        3px 3px 0px #1F4E6B,
-        4px 4px 0px #1F4E6B;
+    text-shadow: 1px 1px 0px #000,
+        2px 2px 0px #000,
+        3px 3px 0px #000,
+        4px 4px 0px #000;
     padding: 5% 0;
 }
 
 #blockchain h2 span {
     color: #F7D422;
     font-style: italic;
+}
+
+#blockchain p {
+    text-align: left;
+    padding: 0% 8%;
 }
 
 .video iframe {
@@ -315,7 +318,7 @@ body {
     cursor: pointer;
     margin: 2% 0;
     padding: 1.125rem;
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Poppins-Bold', sans-serif;
     width: 75%;
     border: none;
     border-radius: 20px;
@@ -340,92 +343,180 @@ body {
 }
 
 .nft-art {
-    color: #FFF;
+    color: #000;
     display: flex;
     font-family: 'Poppins-Regular', sans-serif;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     line-height: 2rem;
-    margin: 10% 0;
-    text-align: center;
+    margin: 10% 0 0 0;
+    text-align: left;
 }
 
 .nft-art h3 {
     font-family: 'Poppins-Bold', sans-serif;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 0px #1F4E6B,
-        2px 2px 0px #1F4E6B,
-        3px 3px 0px #1F4E6B,
-        4px 4px 0px #1F4E6B;
+}
+
+.nft-art p {
+    padding: 0 5%;
+}
+
+.nft-art span {
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.twitter-tweet {
+    padding: 0 5%;
+}
+
+.community {
+    background: rgb(140, 201, 238);
+    background: linear-gradient(180deg, rgba(140, 201, 238, 1) 0%, rgba(166, 107, 157, 1) 52%, rgba(208, 52, 48, 1) 100%);
 }
 
 .negative {
-    background-color: #D14E4B;
+    background-color: #d03430;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: #FFF;
     font-family: 'Poppins-Regular', sans-serif;
-    text-align: center;
+    line-height: 2rem;
+    text-align: left;
 }
 
 .negative h4 {
     font-family: 'Poppins-Bold', sans-serif;
     font-size: 1.2rem;
-    text-shadow: 1px 1px 0px #6B2827,
-        2px 2px 0px #6B2827,
-        3px 3px 0px #6B2827,
-        4px 4px 0px #6B2827;
+    text-shadow: 1px 1px 0px #380c0b,
+        2px 2px 0px #380c0b,
+        3px 3px 0px #380c0b,
+        4px 4px 0px #380c0b;
     padding: 10% 0;
 }
 
+.negative p {
+    padding: 0 10%;
+}
+
+.negative span {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #380c0b,
+        2px 2px 0px #380c0b,
+        3px 3px 0px #380c0b,
+        4px 4px 0px #380c0b;
+}
+
 .investment svg {
-    padding: 5% 0;
-    width: 75%;
+    padding: 5% 10%;
 }
 
-.power img {
-    padding: 5% 0;
-    width: 80%;
+.money-laundering img {
+    padding: 5% 10%;
+    width: 100%;
 }
 
-.computer img {
-    padding: 5% 0;
-    width: 80%;
+.power img,
+.computer img,
+.help img,
+.shortage img,
+.mining-farms svg {
+    padding: 5% 10%;
+    width: 100%;
 }
 
-.help img {
-    width: 80%;
+.computer {
+    background: rgb(208, 52, 48);
+    background: linear-gradient(180deg, rgba(208, 52, 48, 1) 0%, rgba(102, 45, 145, 1) 90%);
 }
 
 .solutions {
+    background-color: #662d91;
     color: #FFF;
     display: flex;
     font-family: 'Poppins-Medium', sans-serif;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    line-height: 2rem;
+    padding: 5% 10% 0 10%;
+    width: 100vw;
+}
+
+.solutions span {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 2rem;
+    text-shadow: 1px 1px 0px #33104E,
+        2px 2px 0px #33104E,
+        3px 3px 0px #33104E,
+        4px 4px 0px #33104E;
+    padding: 10% 0;
+}
+
+.tezos {
+    background: rgb(102, 45, 145);
+    background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(20, 27, 75, 1) 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.tezos p {
+    width: 90%;
 }
 
 .ending {
+    background-color: #141b4b;
+    color: #FFF;
+    display: flex;
+    font-family: 'Poppins-Medium', sans-serif;
+    line-height: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.ending svg {
+    padding: 5% 10%;
+}
+
+.ending p {
+    padding: 5% 0;
+    width: 90%;
+}
+
+.TLDR {
+    background-color: #141b4b;
     color: #FFF;
     display: flex;
     font-family: 'Poppins-Medium', sans-serif;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
+    line-height: 2rem;
 }
 
-.TLDR {
-    color: #FFF;
-    display: flex;
-    font-family: 'Poppins-Medium', sans-serif;
-    justify-content: center;
-    align-items: center;
+.TLDR span {
+    font-size: 3rem;
+}
+
+.TLDR p {
+    padding: 5% 10%;
+}
+
+.TLDR a {
+    color: #F7D422;
+    font-style: italic;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -455,3 +546,5 @@ body {
         height: 100%;
     }
 }
+
+/* TODO CONTINUE STYLE FOR TABLET AND DESKTOP */
