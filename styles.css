@@ -72,6 +72,7 @@ body {
     left: 0;
     right: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 2;
 }
 
 .navbar-container {
@@ -212,6 +213,7 @@ body {
     margin-top: 20%;
     padding: 20% 0;
     text-align: center;
+    width: 100vw;
 }
 
 .start h1 {
@@ -225,6 +227,7 @@ body {
 }
 
 .start span {
+    color: var(--blockchain-color);
     font-family: 'Poppins-Medium', sans-serif;
 }
 
@@ -252,7 +255,7 @@ body {
 .welcome a {
     background-color: var(--blockchain-color);
     border-radius: 20px;
-    color: #FFF;
+    color: #000;
     font-family: 'Poppins-Bold', sans-serif;
     font-size: 2rem;
     padding: 2% 10%;
@@ -352,6 +355,7 @@ body {
 .active,
 .collapsible:hover {
     background-color: #29123c;
+    color: #FFF;
 }
 
 .content {
@@ -668,6 +672,7 @@ body {
 
     .here {
         flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .here img {
@@ -724,6 +729,12 @@ body {
     .etheria .twitter-tweet {
         max-width: 100% !important;
         padding: 1% 15%;
+    }
+
+    .tweet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .positives {
@@ -801,7 +812,7 @@ body {
         width: 100%;
     }
 
-    .tezos a {
+    .solution a {
         color: #FFF;
     }
 
@@ -881,7 +892,343 @@ body {
         padding: 1% 8%;
     }
 
-    .explaination img {
+    .explaination {
+        background: rgb(102, 45, 145);
+        background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(46, 14, 93, 1) 60%, rgba(20, 27, 75, 1) 100%);
+    }
+
+    .explaination svg {
+        width: 50%;
+    }
+
+    .explaination p {
+        line-height: 3rem;
+    }
+
+    #blockchain h2 {
+        font-size: 3rem;
+    }
+
+    #blockchain p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+
+    #blockchain iframe {
+        height: 30rem;
+        width: 83%;
+    }
+
+    .NFT-rect {
+        opacity: 0%;
+    }
+
+    .nft-art h3 {
+        font-size: 3rem;
+        padding-bottom: 3%;
+    }
+
+    .nft-art p {
+        line-height: 2.5rem;
+        padding: 2% 10%;
+    }
+
+    .etheria .twitter-tweet {
+        max-width: 30% !important;
+    }
+
+    .anything-nft {
+        width: 50%;
+    }
+
+    .tweet {
+        justify-content: space-around;
+        width: 90%;
+    }
+
+    .tweet .twitter-tweet {
+        max-width: 25% !important;
+    }
+
+    .immutability img {
+        margin: 0 0;
+    }
+
+    .immutability {
+        padding-bottom: 10%;
+    }
+
+    .negative h4 {
+        font-size: 3rem;
+    }
+
+    .power img {
+        padding: 2% 25%;
+    }
+
+    .solution-span {
+        font-size: 3rem !important;
+    }
+
+    .help {
+        width: 80%;
+    }
+
+    .solutions {
+        font-size: 1.4rem;
+    }
+
+    .solution {
+        background: rgb(102, 45, 145);
+        background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(20, 27, 75, 1) 90%);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+
+    .renewable {
+        margin-bottom: 20%;
+        width: 45%;
+    }
+
+    .tezos {
+        background: transparent;
+        width: 45%;
+    }
+
+    .ending {
+        font-size: 1.5rem;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        line-height: 3.5rem;
+    }
+
+    .ending svg {
+        padding: 0 0;
+        width: 25%;
+    }
+
+    .ending p {
+        width: 25%;
+    }
+
+    .TLDR span {
+        font-size: 4rem;
+    }
+
+    .TLDR p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .footer {
+        padding: 0 0;
+    }
+
+    .links a {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .start {
+        padding: 9% 0;
+    }
+
+    .start p {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin: 2% 0;
+    }
+
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .here {
+        margin: 2% 0;
+        width: 75%;
+    }
+
+    .explaination {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .explaination svg {
+        width: 45%;
+    }
+
+    .explaination p {
+        font-size: 2rem;
+        width: 50%;
+    }
+
+    .explaination a {
+        font-size: 2.2rem;
+    }
+
+    #blockchain iframe {
+        margin: 3% 0;
+        width: 59%;
+    }
+
+    #blockchain p {
+        width: 100%;
+    }
+
+    .database {
+        width: 75% !important;
+    }
+
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .video p {
+        width: 100%;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .nft-art {
+        width: 75%;
+    }
+
+    .tweet {
+        width: 100%;
+    }
+
+    .positives {
+        padding: 2% 0;
+    }
+
+    .community {
+        margin-bottom: 15%;
+    }
+
+    .immutability img,
+    .smart-contract img,
+    .revenue img {
+        width: 80%;
+    }
+
+    .negatives span {
+        font-size: 3rem;
+    }
+
+    .negative h4 {
+        padding: 3% 0;
+    }
+
+    .power {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .power img {
+        padding: 2% 0;
+    }
+
+    .consumption {
+        text-align: center;
+    }
+
+    .investment,
+    .distribution,
+    .fraud,
+    .money-laundering {
+        justify-content: center;
+    }
+
+    .investment svg,
+    .distribution svg,
+    .money-laundering img {
+        width: 75%;
+    }
+
+    .help {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .solution {
+        line-height: 2.5rem;
+    }
+
+    .solution-span {
+        font-size: 4rem !important;
+    }
+
+    .renewable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .renewable svg {
+        margin: 5% 0;
+        width: 75%;
+    }
+
+    .renewable p {
+        width: 90%;
+    }
+
+    .renewable span {
+        font-size: 3rem;
+    }
+
+    .renewable-span {
+        text-align: center;
+    }
+
+    .tezos span {
+        font-size: 3rem;
+    }
+
+    .ending {
+        padding: 5% 0;
+    }
+
+    .TLDR {
+        padding: 10% 0;
+    }
+
+    .footer {
+        padding: 3% 0;
+    }
+
+    .link {
+        width: 35%;
+    }
+
+    .link a {
+        font-size: 2rem;
+        padding: 3%;
+    }
+
+    .contact p {
+        font-size: 2.5rem;
+        padding-bottom: 2%;
+    }
+
+    .contact svg {
         width: 50%;
     }
 }
