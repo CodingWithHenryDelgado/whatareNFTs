@@ -5,11 +5,541 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="What are NFTs? Here are some info and facts about NFTs">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./reset.css">
+    <meta name="twitter:widgets:theme" content="dark">
+    <link rel="stylesheet" href="./reset.css" media="all">
     <link rel="icon" type="image/svg+xml" href="https://img.icons8.com/material-outlined/24/000000/question.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>NFTs?</title>
+    <style>
+        :root {
+            --navbar-bg-color: #2D163E;
+            --navbar-text-color: hsl(0, 0%, 85%);
+            --navbar-text-color-focus: white;
+            --navbar-bg-contrast: #662D91;
+            --blockchain-color: #EBC438;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            align-items: center;
+            background: #FFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            overflow: scroll;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        #navbar {
+            --navbar-height: 100px;
+            position: fixed;
+            height: var(--navbar-height);
+            background-color: var(--navbar-bg-color);
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            align-items: center;
+        }
+
+        .navbar-item {
+            margin: 0.4em;
+            width: 100%;
+        }
+
+        .home-link,
+        .navbar-link {
+            color: var(--navbar-text-color);
+            text-decoration: none;
+            display: flex;
+            font-weight: 400;
+            align-items: center;
+        }
+
+        .home-link img {
+            padding-left: 10%;
+        }
+
+
+        .navbar-link {
+            font-family: 'Poppins-Medium', sans-serif;
+            justify-content: center;
+            width: 100%;
+            padding: 0.4em 0.8em;
+            border-radius: 5px;
+        }
+
+
+        #navbar-toggle {
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .icon-bar {
+            display: block;
+            width: 25px;
+            height: 4px;
+            margin: 2px;
+            background-color: var(--navbar-text-color);
+        }
+
+        #navbar-menu {
+            position: fixed;
+            top: var(--navbar-height);
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            left: 0;
+            right: 0;
+        }
+
+        .navbar-links {
+            list-style: none;
+            position: absolute;
+            background-color: var(--navbar-bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            left: 0;
+            right: 0;
+            margin: 1.4rem;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .start {
+            background-color: #662D91;
+            color: #FFF;
+            font-family: 'Quant', sans-serif;
+            font-size: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20%;
+            padding: 20% 0;
+            text-align: center;
+            width: 100vw;
+        }
+
+        .start h1 {
+            font-family: 'Poppins-Medium', sans-serif;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 0px #2D163E,
+                2px 2px 0px #2D163E,
+                3px 3px 0px #2D163E,
+                4px 4px 0px #2D163E;
+            padding-top: 5%;
+        }
+
+        .start span {
+            color: var(--blockchain-color);
+            font-family: 'Poppins-Medium', sans-serif;
+        }
+
+        .here {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5% 0;
+        }
+
+        .here img {
+            width: 75vw;
+        }
+
+        .here p {
+            line-height: 2rem;
+            margin-top: 5% !important;
+        }
+
+        .start p {
+            margin: 5% 0 10% 0;
+        }
+
+        .welcome a {
+            background-color: var(--blockchain-color);
+            border-radius: 20px;
+            color: #000;
+            font-family: 'Poppins-Bold', sans-serif;
+            font-size: 2rem;
+            padding: 2% 10%;
+            text-decoration: none;
+        }
+
+        .explaination {
+            background-color: #141B4B;
+            color: #FFF;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Quant', sans-serif;
+            line-height: 2rem;
+            text-align: left;
+        }
+
+        .explaination a {
+            color: var(--blockchain-color);
+            font-family: 'Poppins-Bold', sans-serif;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .explaination p {
+            width: 85%;
+            padding-bottom: 10%;
+        }
+
+        #blockchain {
+            background-color: #141B4B;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Quant', sans-serif;
+            line-height: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #blockchain h2 {
+            font-family: 'Poppins-Bold', sans-serif;
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 0px #000,
+                2px 2px 0px #000,
+                3px 3px 0px #000,
+                4px 4px 0px #000;
+            padding: 5% 0;
+        }
+
+        #blockchain h2 span {
+            color: var(--blockchain-color);
+            font-style: italic;
+        }
+
+        #blockchain p {
+            text-align: left;
+            padding: 0% 8%;
+        }
+
+        .blockchain-wave {
+            margin-top: -1%;
+            transform: rotate(180deg);
+            z-index: -1;
+        }
+
+        .source {
+            color: #2D163E;
+            font-family: 'Poppins-Bold', sans-serif;
+            font-size: 1.2rem !important;
+            text-decoration: underline;
+        }
+
+        .video iframe {
+            margin: 5% 0;
+            width: 90vw;
+        }
+
+        .collapsible {
+            background-color: #FFF;
+            color: #000;
+            cursor: pointer;
+            margin: 2% 0;
+            padding: 1.125rem;
+            font-family: 'Poppins-Bold', sans-serif;
+            width: 75%;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            outline: none;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            border-radius: 20px;
+            color: #000;
+            padding: 0 18px;
+            display: none;
+            overflow: scroll;
+            width: 75%;
+            background-color: #f1f1f1;
+        }
+
+        .nft-art {
+            color: #000;
+            display: flex;
+            font-family: 'Quant', sans-serif;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 2rem;
+            margin: 10% 0 0 0;
+            text-align: left;
+        }
+
+        .nft-art h3 {
+            font-family: 'Poppins-Bold', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        .nft-art p {
+            padding: 3% 5%;
+        }
+
+        .nft-art span {
+            font-family: 'Poppins-Bold', sans-serif;
+        }
+
+        .positive {
+            color: var(--blockchain-color);
+            text-shadow: 1px 1px 0px #000,
+                2px 2px 0px #000,
+                3px 3px 0px #000;
+        }
+
+        .twitter-tweet {
+            padding: 0 5%;
+        }
+
+        .positives span {
+            font-family: 'Actor', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
+        }
+
+        .negative {
+            background-color: #d03430;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #FFF;
+            font-family: 'Quant', sans-serif;
+            line-height: 2rem;
+            text-align: left;
+        }
+
+        .negative h4 {
+            font-family: 'Poppins-Bold', sans-serif;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 0px #380c0b,
+                2px 2px 0px #380c0b,
+                3px 3px 0px #380c0b,
+                4px 4px 0px #380c0b;
+            padding: 10% 0;
+        }
+
+        .negative p {
+            padding: 0 10%;
+        }
+
+        .negative span {
+            font-family: 'Actor', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0px #380c0b,
+                2px 2px 0px #380c0b,
+                3px 3px 0px #380c0b,
+                4px 4px 0px #380c0b;
+        }
+
+        .investment svg {
+            padding: 5% 10%;
+        }
+
+        .money-laundering img {
+            padding: 5% 10%;
+            width: 100%;
+        }
+
+        .immutability img,
+        .smart-contract img,
+        .power img,
+        .computer img,
+        .help img,
+        .revenue img,
+        .shortage img,
+        .mining-farms svg {
+            padding: 5%;
+            width: 100%;
+        }
+
+
+        .solutions-wave {
+            background-color: #d03430;
+        }
+
+        .solutions {
+            background-color: #662d91;
+            color: #FFF;
+            display: flex;
+            font-family: 'Quant', sans-serif;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: left;
+            line-height: 2rem;
+            padding: 5% 10% 0 10%;
+            width: 100vw;
+        }
+
+        .solutions span {
+            font-family: 'Actor', sans-serif;
+            font-size: 2rem;
+            text-shadow: 1px 1px 0px #33104E,
+                2px 2px 0px #33104E,
+                3px 3px 0px #33104E,
+                4px 4px 0px #33104E;
+            padding: 10% 0;
+            text-transform: uppercase;
+        }
+
+        .solution {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .tezos {
+            background: rgb(102, 45, 145);
+            background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(20, 27, 75, 1) 90%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+        }
+
+        .tezos p {
+            width: 90%;
+        }
+
+        .ending {
+            background-color: #141b4b;
+            color: #FFF;
+            display: flex;
+            font-family: 'Quant', sans-serif;
+            line-height: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .ending svg {
+            padding: 5% 10%;
+        }
+
+        .ending p {
+            padding: 5% 0;
+            width: 90%;
+        }
+
+        .TLDR {
+            background-color: #141b4b;
+            color: #FFF;
+            display: flex;
+            font-family: 'Poppins-Medium', sans-serif;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 2rem;
+        }
+
+        .TLDR span {
+            font-size: 3rem;
+        }
+
+        .TLDR p {
+            padding: 5% 10%;
+        }
+
+        .TLDR a {
+            color: var(--blockchain-color);
+            font-style: italic;
+            text-decoration: none;
+        }
+
+
+        .footer {
+            background-color: var(--navbar-bg-color);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            padding: 10% 0;
+        }
+
+        .link {
+            color: #FFF;
+            font-family: 'Actor', sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+
+        .link a {
+            padding: 10% 5%;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Poppins-Regular', sans-serif;
+            font-size: 0.7rem;
+            color: #FFF;
+            text-align: center;
+            text-transform: uppercase;
+            width: 25%;
+        }
+
+        .contact p {
+            padding-bottom: 10%;
+        }
+
+        .contact svg {
+            padding: 10% 0;
+        }
+
+        .contact-svg {
+            filter: invert(95%) sepia(79%) saturate(0%) hue-rotate(223deg) brightness(108%) contrast(108%);
+        }
+    </style>
+    <link rel="preload" href="./styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./styles.css"></noscript>
 </head>
 <body>
     <header id="navbar">
@@ -18953,17 +19483,17 @@
         </div>
         <div class="positives" id="positives">
             <div class="immutability">
-                <img src="https://elixirforum.com/uploads/default/original/3X/7/e/7e5aa6f3d3279f97c1848020d069aed7a527e97c.png" alt="Immutabile def">
+                <img src="./images/immutable.png" alt="Immutabile def">
                 <p><span>1. Immutability</span></p>
                 <p>NFTs can’t be changed or replaced in any way if their authenticity is verified on the blockchain. The intrinsic value of authenticity becomes an actual, extrinsic value, as well. <a class="source" href="https://thedalesreport.com/crypto-nfts/nfts-pros-cons-the-good-the-bad-and-the-ugly/" target="_blank">4</a></p>
             </div>
             <div class="smart-contract">
-                <img src="https://2muchcoffee.com/blog/content/images/2021/05/How-Smart-Contracts-Works-1.png" alt="Smart contract">
+                <img src="./images/contract.png" alt="Smart contract">
                 <p><span>2. Smart Contract</span></p>
                 <p>Smart contracts — the heart and soul of blockchain technology — make automatic executions after certain events possible. For example, if the NFT owner resells it for a profit later and the artist attached a royalty “rider” to the contract, the artist gets compensated immediately.<a class="source" href="https://thedalesreport.com/crypto-nfts/nfts-pros-cons-the-good-the-bad-and-the-ugly/" target="_blank">5</a></p>
             </div>
             <div class="revenue">
-                <img src="https://s3.amazonaws.com/mentoring.redesign/s3fs-public/8-16-financial-growth-puzzle.jpg" alt="Revenue stream">
+                <img src="./images/revenue.jpg" alt="Revenue stream">
                 <p><span>3. New Revenue Stream for Artists</span></p>
                 <p>NFTs were partially created to help artists earn more money in a digital landscape that hasn’t been particularly kind to them before. If their artwork accrues more value — which it gains when it becomes popular on the internet — the artist realizes gains income.</p>
                 <p>For example, CryptoPunk #3100 first sold for $2,127 on July 6, 2017. The collector who owned the artwork refused to sell until March 2021, although whoever it was received plenty of offers.</p>
@@ -19230,7 +19760,7 @@
         <h4>So what are the negatives?</h4>
         <div class="negatives">
             <div class="power">
-                <a href="https://www.cbinsights.com/research/what-is-ethereum/" target="_blank"><img src="https://research-assets.cbinsights.com/2021/05/11015648/Ethereum-Energy-Consumption-min-768x328.png" alt="Bitcoin chart" /></a>
+                <a href="./images/ethereum.png" target="_blank"><img src="https://research-assets.cbinsights.com/2021/05/11015648/Ethereum-Energy-Consumption-min-768x328.png" alt="Bitcoin chart" /></a>
                 <p class="consumption"><span>1. Total Electricty Consumption</span></p>
                 <br/>
                 <p>
@@ -19534,7 +20064,7 @@
             </div>
             <br />
             <div class="money-laundering">
-                <img src="https://www.pymnts.com/wp-content/uploads/2020/03/Chinese-Nationals-money-Laundering-Cryptocurrency-virtual-currency-exchange-department-of-Justice-north-korea.jpg" alt="Bitcoin Money laundering">
+                <img src="./images/money.jpg" alt="Bitcoin Money laundering">
                 <p><span>5. Money Laundering</span></p>
                 <br />
                 <p>
