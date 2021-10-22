@@ -1,26 +1,31 @@
 @font-face {
     font-family: "Poppins-Medium";
     src: url("./font/Poppins-Medium.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Poppins-Bold";
     src: url("./font/Poppins-Bold.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Poppins-Regular";
     src: url("./font/Poppins-Regular.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Actor";
     src: url("./font/Actor-Regular.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Quat";
     src: url("./font/Quattrocento-Regular.ttf");
+    font-display: swap;
 }
 
 .header {
@@ -367,7 +372,7 @@
         width: 25%;
     }
 
-    .welcome a {
+    .start a {
         padding: 1% 8%;
     }
 
@@ -376,8 +381,8 @@
         background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(46, 14, 93, 1) 60%, rgba(20, 27, 75, 1) 100%);
     }
 
-    .explaination svg {
-        width: 50%;
+    .explaination img {
+        width: 30%;
     }
 
     .explaination p {
@@ -538,15 +543,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
-
-    .explaination svg {
-        width: 45%;
+        align-items: flex-start;
     }
 
     .explaination p {
         font-size: 2rem;
-        width: 50%;
+        width: 45%;
     }
 
     .explaination a {
