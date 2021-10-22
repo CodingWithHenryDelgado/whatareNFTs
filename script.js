@@ -21,8 +21,10 @@ for (i = 0; i < coll.length; i++) {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
+      content.classList.remove("tracking-in-expand");
       content.style.display = "none";
     } else {
+      content.classList.add("tracking-in-expand");
       content.style.display = "block";
     }
   });

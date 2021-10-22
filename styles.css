@@ -13,11 +13,22 @@
     src: url("./font/Poppins-Regular.ttf");
 }
 
+@font-face {
+    font-family: "Actor";
+    src: url("./font/Actor-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quat";
+    src: url("./font/Quattrocento-Regular.ttf");
+}
+
 :root {
     --navbar-bg-color: #2D163E;
     --navbar-text-color: hsl(0, 0%, 85%);
     --navbar-text-color-focus: white;
-    --navbar-bg-contrast: hsl(0, 0%, 25%);
+    --navbar-bg-contrast: #662D91;
+    --blockchain-color: #EBC438;
 }
 
 html {
@@ -30,7 +41,7 @@ html {
 
 body {
     align-items: center;
-    background: #8CC9EE;
+    background: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,21 +203,20 @@ body {
 .start {
     background-color: #662D91;
     color: #FFF;
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Quant', sans-serif;
     font-size: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30%;
-    padding-top: 5%;
-    padding-bottom: 20%;
+    margin-top: 20%;
+    padding: 20% 0;
     text-align: center;
 }
 
 .start h1 {
     font-family: 'Poppins-Medium', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     text-shadow: 1px 1px 0px #2D163E,
         2px 2px 0px #2D163E,
         3px 3px 0px #2D163E,
@@ -240,7 +250,7 @@ body {
 }
 
 .welcome a {
-    background-color: #EBC438;
+    background-color: var(--blockchain-color);
     border-radius: 20px;
     color: #FFF;
     font-family: 'Poppins-Bold', sans-serif;
@@ -256,13 +266,13 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Quant', sans-serif;
     line-height: 2rem;
     text-align: left;
 }
 
 .explaination a {
-    color: #F7D422;
+    color: var(--blockchain-color);
     font-family: 'Poppins-Bold', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
@@ -274,14 +284,13 @@ body {
 }
 
 #blockchain {
-    background: rgb(20, 27, 75);
-    background: linear-gradient(180deg, rgba(20, 27, 75, 1) 0%, rgba(20, 27, 75, 1) 20%, rgba(45, 63, 109, 1) 40%, rgba(140, 201, 238, 1) 70%);
+    background-color: #141B4B;
     color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Quant', sans-serif;
     line-height: 2rem;
     text-align: center;
     width: 100%;
@@ -298,13 +307,26 @@ body {
 }
 
 #blockchain h2 span {
-    color: #F7D422;
+    color: var(--blockchain-color);
     font-style: italic;
 }
 
 #blockchain p {
     text-align: left;
     padding: 0% 8%;
+}
+
+.blockchain-wave {
+    margin-top: -1%;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.source {
+    color: #2D163E;
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 1.2rem !important;
+    text-decoration: underline;
 }
 
 .video iframe {
@@ -329,7 +351,7 @@ body {
 
 .active,
 .collapsible:hover {
-    background-color: #888;
+    background-color: #29123c;
 }
 
 .content {
@@ -345,7 +367,7 @@ body {
 .nft-art {
     color: #000;
     display: flex;
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Quant', sans-serif;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -360,20 +382,34 @@ body {
 }
 
 .nft-art p {
-    padding: 0 5%;
+    padding: 3% 5%;
 }
 
 .nft-art span {
     font-family: 'Poppins-Bold', sans-serif;
 }
 
+.positive {
+    color: var(--blockchain-color);
+    text-shadow: 1px 1px 0px #000,
+        2px 2px 0px #000,
+        3px 3px 0px #000;
+}
+
 .twitter-tweet {
     padding: 0 5%;
 }
 
+.positives span {
+    font-family: 'Actor', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
+}
+
 .community {
-    background: rgb(140, 201, 238);
-    background: linear-gradient(180deg, rgba(140, 201, 238, 1) 0%, rgba(166, 107, 157, 1) 52%, rgba(208, 52, 48, 1) 100%);
+    /* background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 80%, rgba(208, 52, 48, 1) 100%); */
 }
 
 .negative {
@@ -383,7 +419,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: #FFF;
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Quant', sans-serif;
     line-height: 2rem;
     text-align: left;
 }
@@ -403,7 +439,7 @@ body {
 }
 
 .negative span {
-    font-family: 'Poppins-Bold', sans-serif;
+    font-family: 'Actor', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-shadow: 1px 1px 0px #380c0b,
@@ -421,12 +457,15 @@ body {
     width: 100%;
 }
 
+.immutability img,
+.smart-contract img,
 .power img,
 .computer img,
 .help img,
+.revenue img,
 .shortage img,
 .mining-farms svg {
-    padding: 5% 10%;
+    padding: 5%;
     width: 100%;
 }
 
@@ -435,11 +474,15 @@ body {
     background: linear-gradient(180deg, rgba(208, 52, 48, 1) 0%, rgba(102, 45, 145, 1) 90%);
 }
 
+.solutions-wave {
+    background-color: #d03430;
+}
+
 .solutions {
     background-color: #662d91;
     color: #FFF;
     display: flex;
-    font-family: 'Poppins-Medium', sans-serif;
+    font-family: 'Quant', sans-serif;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -450,13 +493,22 @@ body {
 }
 
 .solutions span {
-    font-family: 'Poppins-Bold', sans-serif;
+    font-family: 'Actor', sans-serif;
     font-size: 2rem;
     text-shadow: 1px 1px 0px #33104E,
         2px 2px 0px #33104E,
         3px 3px 0px #33104E,
         4px 4px 0px #33104E;
     padding: 10% 0;
+    text-transform: uppercase;
+}
+
+.solution {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .tezos {
@@ -477,7 +529,7 @@ body {
     background-color: #141b4b;
     color: #FFF;
     display: flex;
-    font-family: 'Poppins-Medium', sans-serif;
+    font-family: 'Quant', sans-serif;
     line-height: 2rem;
     justify-content: center;
     align-items: center;
@@ -514,9 +566,63 @@ body {
 }
 
 .TLDR a {
-    color: #F7D422;
+    color: var(--blockchain-color);
     font-style: italic;
     text-decoration: none;
+}
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.footer {
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    padding: 10% 0;
+}
+
+.link {
+    color: #FFF;
+    font-family: 'Actor', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.link a {
+    padding: 10% 5%;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 0.7rem;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    width: 25%;
+}
+
+.contact p {
+    padding-bottom: 10%;
+}
+
+.contact svg {
+    padding: 10% 0;
+}
+
+.contact-svg {
+    filter: invert(95%) sepia(79%) saturate(0%) hue-rotate(223deg) brightness(108%) contrast(108%);
 }
 
 @media screen and (min-width: 768px) {
@@ -545,6 +651,269 @@ body {
         width: 100%;
         height: 100%;
     }
+
+    .start {
+        margin-top: 0%;
+    }
+
+    .start h1 {
+        font-size: 3.5rem;
+        padding-top: 0%;
+    }
+
+    .start p {
+        font-size: 1.5rem;
+        margin: 5% 0 15% 0;
+    }
+
+    .here {
+        flex-direction: row;
+    }
+
+    .here img {
+        width: 30%;
+    }
+
+    .here p {
+        text-align: right;
+        width: 45%;
+    }
+
+    .explaination {
+        font-size: 1.5rem;
+    }
+
+    .explaination a {
+        font-size: 1.5rem;
+    }
+
+    .explaination img {
+        width: 100%;
+    }
+
+    #blockchain {
+        font-size: 1.5rem;
+    }
+
+    #blockchain h2 {
+        font-size: 2.5rem;
+    }
+
+    #blockchain iframe {
+        width: 85%;
+    }
+
+    .collapsible {
+        margin: 2% 5%;
+        width: 50%;
+    }
+
+    .content {
+        width: 50%;
+    }
+
+    .nft-art h3 {
+        font-size: 2.5rem;
+    }
+
+    .nft-art p {
+        font-size: 1.2rem;
+        padding: 5% 10%;
+    }
+
+    .etheria .twitter-tweet {
+        max-width: 100% !important;
+        padding: 1% 15%;
+    }
+
+    .positives {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .immutability,
+    .smart-contract,
+    .revenue,
+    .community {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    .immutability img {
+        margin: -10% 0 0 0;
+        padding: 0 5%;
+    }
+
+    .community {
+        margin-bottom: 40%;
+    }
+
+    .negatives {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-size: 1.2rem;
+    }
+
+    .negative h4 {
+        font-size: 2rem;
+        padding: 5% 0;
+    }
+
+    .power img {
+        padding: 2% 15%;
+    }
+
+    .investment,
+    .distribution,
+    .fraud,
+    .money-laundering {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 2% 0;
+        width: 50%;
+    }
+
+    .investment p,
+    .distribution p,
+    .fraud p,
+    .money-laundering p {
+        padding: 2% 10%;
+    }
+
+    .solutions {
+        font-size: 1.2rem;
+    }
+
+    .ending {
+        font-size: 1.2rem;
+    }
+
+    .renewable {
+        width: 100%;
+    }
+
+    .tezos a {
+        color: #FFF;
+    }
+
+    .TLDR {
+        padding-bottom: 5%;
+    }
+
+    .TLDR-span {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .TLDR p {
+        font-size: 1.2rem;
+        padding: 0;
+        width: 80%;
+    }
+
+    .footer {
+        padding: 5% 0;
+    }
+
+    .link {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .link a {
+        font-size: 1.5rem;
+        text-align: left;
+        width: 33%;
+    }
+
+    .link a:link {
+        text-decoration: none;
+    }
+
+    .link a:hover {
+        color: var(--blockchain-color);
+        transform: scale(1.1);
+    }
+
+    .link a:visited {
+        color: var(--blockchain-color);
+    }
+
+    .contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contact svg {
+        width: 80%;
+    }
+
+    .contact a {
+        padding: 0 1%;
+        width: 30%;
+    }
+
+    .contact p {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .start {
+        padding: 15% 0;
+    }
+
+    .start p {
+        margin: 5% 0;
+    }
+
+    .welcome a {
+        padding: 1% 8%;
+    }
+
+    .explaination img {
+        width: 50%;
+    }
 }
 
 /* TODO CONTINUE STYLE FOR TABLET AND DESKTOP */
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
