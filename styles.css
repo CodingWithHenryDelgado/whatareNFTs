@@ -105,6 +105,13 @@
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    text-transform: capitalize;
+}
+
 @media screen and (min-width: 768px) {
 
     #navbar-toggle,
@@ -143,7 +150,8 @@
 
     .start p {
         font-size: 1.5rem;
-        margin: 5% 0 15% 0;
+        line-height: 2.2rem;
+        margin: 0;
     }
 
     .here {
@@ -152,11 +160,10 @@
     }
 
     .here img {
-        width: 30%;
+        width: auto;
     }
 
     .here p {
-        text-align: right;
         width: 45%;
     }
 
@@ -166,10 +173,6 @@
 
     .explaination a {
         font-size: 1.5rem;
-    }
-
-    .explaination img {
-        width: 100%;
     }
 
     #blockchain {
@@ -191,6 +194,11 @@
 
     .content {
         width: 50%;
+        margin-bottom: 5%;
+    }
+
+    .nft-art {
+        height: auto;
     }
 
     .nft-art h3 {
@@ -199,7 +207,7 @@
 
     .nft-art p {
         font-size: 1.2rem;
-        padding: 5% 10%;
+        padding: 2% 10%;
     }
 
     .etheria .twitter-tweet {
@@ -216,18 +224,24 @@
     .positives {
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
+        max-height: 1000px;
     }
 
     .immutability,
     .smart-contract,
     .revenue,
     .community {
+        border: 1px dashed black;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
+        min-height: 500px;
+        max-height: 500px;
+        padding: 2% 0;
+        overflow-y: scroll;
         width: 50%;
     }
 
@@ -261,11 +275,10 @@
     .distribution,
     .fraud,
     .money-laundering {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        border: 1px dashed black;
+        max-height: 500px;
         padding: 2% 0;
+        overflow-y: scroll;
         width: 50%;
     }
 
@@ -288,8 +301,9 @@
         width: 100%;
     }
 
-    .solution a {
-        color: #FFF;
+    .renewable,
+    .tezos {
+        overflow-x: hidden;
     }
 
     .TLDR {
@@ -322,19 +336,6 @@
         width: 33%;
     }
 
-    .link a:link {
-        text-decoration: none;
-    }
-
-    .link a:hover {
-        color: var(--blockchain-color);
-        transform: scale(1.1);
-    }
-
-    .link a:visited {
-        color: var(--blockchain-color);
-    }
-
     .contact {
         flex-direction: row;
         flex-wrap: wrap;
@@ -364,25 +365,13 @@
         margin: 5% 0;
     }
 
-    .here {
-        justify-content: center;
-    }
-
-    .here img {
-        width: 25%;
-    }
-
     .start a {
         padding: 1% 8%;
     }
 
-    .explaination {
-        background: rgb(102, 45, 145);
-        background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(46, 14, 93, 1) 60%, rgba(20, 27, 75, 1) 100%);
-    }
-
     .explaination img {
-        width: 30%;
+        padding: 5% 0;
+        width: 50%;
     }
 
     .explaination p {
@@ -463,22 +452,23 @@
     }
 
     .solution {
-        background: rgb(102, 45, 145);
-        background: linear-gradient(180deg, rgba(102, 45, 145, 1) 0%, rgba(20, 27, 75, 1) 90%);
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100vw;
     }
 
-    .renewable {
-        margin-bottom: 20%;
-        width: 45%;
+    .renewable,
+    .tezos {
+        min-height: 1300px;
+        max-height: 1300px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 50%;
     }
 
     .tezos {
-        background: transparent;
-        width: 45%;
+        padding: 5% 0;
     }
 
     .ending {
@@ -543,16 +533,23 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
+        padding: 5% 0;
     }
 
     .explaination p {
         font-size: 2rem;
+        padding-bottom: 0;
         width: 45%;
     }
 
     .explaination a {
         font-size: 2.2rem;
+    }
+
+    .explaination img {
+        padding: 0 0;
+        width: 35%;
     }
 
     #blockchain iframe {
@@ -581,10 +578,6 @@
 
     .content {
         width: 80%;
-    }
-
-    .nft-art {
-        width: 75%;
     }
 
     .tweet {
@@ -654,18 +647,6 @@
         font-size: 4rem !important;
     }
 
-    .renewable {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    .renewable svg {
-        margin: 5% 0;
-        width: 75%;
-    }
 
     .renewable p {
         width: 90%;
